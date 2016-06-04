@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="lounge.css">
+<!--script  src="longe.js"-->
+<title>global</title>
+</head>
+<body>
+
+<p>hello nihaoma</p>
+
+<script>
+
+
+	
+	document.write("hhahah")
+	
+	
+	function Dog(name, breed, weight){
+	
+		this.name   = name;
+		this.breed  = breed;
+		this.weight = weight;
+		this.bark   = function (){
+						
+						if (this.weight>30)
+							document.write(this.name+" says woof\n");
+						else
+							document.write(this.name+" says Yip\n");
+		
+		            };
+	}
+	
+	var fido = new Dog("fido", "mixed", 39);
+	var tiny = new Dog("Tom", "chawalla", 20);
+	var pets = new Array();
+	pets.push(fido);
+	pets.push(tiny);
+	
+	for (var i = 0;i<pets.length;i++)
+		pets[i].bark();
+	
+	for (var p in pets)
+	  document.write(p.name)
+	  
+	  
+	function mywrite(){
+	
+		document.write(window.location);
+		document.write(window.status);
+		document.write(window.document);
+		document.write(window.onload);
+		
+		var i = prompt("please input");
+		document.write(i);
+		window.location = ""
+		window.open(i);
+		
+	}
+	
+	window.onload = mywrite;
+</script>
+   
+ </script>
+ </body>
+</html>

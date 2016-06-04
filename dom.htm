@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<title>My Blog</title>
+	<meta charset="utf-8">
+	
+	<script src="./js/myLocalStore.js"></script>
+	<script>
+		function init(){
+			var button =document.getElementById("addSong");
+			button.onclick = handleClick;
+			loadPlaylist();
+			mysong();
+		}
+		
+		window.onload = init;
+		
+		function handleClick(){
+			var textInput = document.getElementById("song");
+			var songName = textInput.value;
+			var li = document.createElement("li");
+			li.innerHTML = songName;
+			var ul = document.getElementById("playlist");
+			ul.appendChild(li);
+			save(songName);
+		}
+		var temp = new Array();
+		var temp2 = [20,30,40,80]
+		temp[0] = 10
+		temp[1] = 20.7
+		temp[2] = "hello"
+		var i =0 
+		while (i<temp2.length){
+			document.write(temp2[i])
+			i++
+		}
+		function mysong(){
+			var playlistArray = getSavedSongs();
+		    var song = document.getElementById("song"); 
+			song.value = playlistArray[playlistArray.length-1];
+		}
+		
+		
+		var now = new Date().getTime();
+		document.write(now)
+		
+    </script>
+	
+	
+</head>
+<body>
+    
+	<form>
+		<input id ="song" type = "text" value ="yesterday once more"/>
+		<input id ="addSong" type ="button" value ="add"/>
+	</form>
+	<ul id ="playlist">
+	</ul>
+	<h1>MyBlog</h1>
+	<div id = "entry1">
+		<h2>Great day bird watching</h2>
+		<p id = "me"> 
+			Today I saw three ducks!
+			T named them
+			Huey , Louie and  Dewey.
+		</p>
+		
+	</div>
+	<p id = "abc"> 
+			Today I saw three ducks!
+			T named them
+			Huey , Louie and  Dewey.
+	</p>
+	
+	
+</body>
+</html>
+		
